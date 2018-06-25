@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercice 1</title>
+    <script src="jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <input type="button" name="button" id="valide" value="validez"></button>
+    <input type="text" id="inputValue" placeholder="entre 1 et 100"></input>
+  </body>
+  <script>
+  // nombre aleatoire entre 0 et 100
+  var randomNumber = Math.trunc(Math.random(100)*100);
+  var testValue = 0;
+  // quand on valide incremente le compteur test
+  $('#valide').click(function() {
+    var value = $('#inputValue').val();
+    testValue++;
+    // condition de reussite ou indice moins ou plus
+    if(value == randomNumber) {
+      alert('Et c\'est le juste prix madame ! : ' + testValue 'tries');
+    } else if(value > randomNumber) {
+      alert('c\'est moins');
+    } else {
+      alert('c\'est plus');
+    }
+  });
+  </script>
+</html>
